@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bvmywvntsej1o"]
 
 [ext_resource type="FontFile" uid="uid://xb6d0x5wfswk" path="res://FontdinerSwanky-Regular.ttf" id="1_lti8b"]
-[ext_resource type="Texture2D" uid="uid://daka0n8jtjr" path="res://image-removebg-preview.png" id="1_mae5d"]
+[ext_resource type="Texture2D" path="res://image-removebg-preview.png" id="1_mae5d"]
 [ext_resource type="FontFile" uid="uid://d3vmv824tv2ev" path="res://static/Firjar-Thin.ttf" id="3_4hy44"]
 
 [node name="Node2D" type="Node2D"]

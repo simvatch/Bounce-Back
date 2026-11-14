@@ -15,8 +15,8 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Bounce Back"
-run/main_scene="uid://bgvnkmgxub8tg"
-config/features=PackedStringArray("4.7", "Forward Plus")
+run/main_scene="uid://bvmywvntsej1o"
+config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
 [rendering]
