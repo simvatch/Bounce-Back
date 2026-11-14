@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c42fq1il61dpn"
-path="res://.godot/imported/explosion.wav-93aee333cdacd774a9e9de2a83478f9f.sample"
+path="res://.godot/imported/explosion.wav-7732473cf742aa7f0ba95e86c38fb09a.sample"
 
 [deps]
 
-source_file="res://Assets/sounds/explosion.wav"
-dest_files=["res://.godot/imported/explosion.wav-93aee333cdacd774a9e9de2a83478f9f.sample"]
+source_file="res://Tutorial assets/sounds/explosion.wav"
+dest_files=["res://.godot/imported/explosion.wav-7732473cf742aa7f0ba95e86c38fb09a.sample"]
 
 [params]
 
