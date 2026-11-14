@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dx2miamulub26" path="res://Tutorial scenes/Player.tscn" id="1_6kt2b"]
 [ext_resource type="PackedScene" uid="uid://bq70sb4c08dph" path="res://platform.tscn" id="3_s1dut"]
 [ext_resource type="PackedScene" uid="uid://br7j6j5majang" path="res://Tutorial scenes/coin.tscn" id="4_44yda"]
+[ext_resource type="PackedScene" uid="uid://co8oqbpd4jcrx" path="res://Tutorial scenes/building.tscn" id="5_xy7jm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s1dut"]
 texture = ExtResource("1_2gk31")
@@ -192,3 +193,6 @@ position = Vector2(40, 9)
 
 [node name="Coin node 2D4" parent="." unique_id=2883360 instance=ExtResource("4_44yda")]
 position = Vector2(136, -22)
+
+[node name="Node2D" parent="." unique_id=1995150779 instance=ExtResource("5_xy7jm")]
+position = Vector2(259, -448)
