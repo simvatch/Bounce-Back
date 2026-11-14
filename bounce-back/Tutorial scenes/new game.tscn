@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://le4j0rec0l0k"]
+
+[ext_resource type="PackedScene" uid="uid://dx2miamulub26" path="res://Tutorial scenes/Player.tscn" id="1_ol5py"]
+[ext_resource type="PackedScene" uid="uid://co8oqbpd4jcrx" path="res://Tutorial scenes/building.tscn" id="2_phjim"]
+[ext_resource type="Texture2D" uid="uid://wjkbsm578ktt" path="res://chair.png" id="3_aogk1"]
+[ext_resource type="Texture2D" uid="uid://osmsjdn8i4fa" path="res://fishTank.png" id="4_1oqtj"]
+[ext_resource type="Texture2D" uid="uid://blggai6vywt5f" path="res://flower.png" id="5_ihsvy"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b0sjq"]
+texture = ExtResource("3_aogk1")
+3:3/size_in_atlas = Vector2i(3, 5)
+3:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_djh8m"]
+texture = ExtResource("4_1oqtj")
+2:6/size_in_atlas = Vector2i(4, 2)
+2:6/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gk2op"]
+texture = ExtResource("5_ihsvy")
+3:4/0 = 0
+4:4/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_tt62d"]
+sources/0 = SubResource("TileSetAtlasSource_b0sjq")
+sources/1 = SubResource("TileSetAtlasSource_djh8m")
+sources/2 = SubResource("TileSetAtlasSource_gk2op")
+
+[node name="Node2D" type="Node2D" unique_id=664124610]
+
+[node name="Player Node2D" parent="." unique_id=2059928526 instance=ExtResource("1_ol5py")]
+z_index = 5
+position = Vector2(-1, -1)
+
+[node name="Building Node2D2" parent="." unique_id=663521476 instance=ExtResource("2_phjim")]
+position = Vector2(-10, -1019)
+
+[node name="TileMap" type="TileMap" parent="." unique_id=708413870]
+tile_set = SubResource("TileSet_tt62d")
+format = 2

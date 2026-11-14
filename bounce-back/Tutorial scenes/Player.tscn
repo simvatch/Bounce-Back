@@ -60,6 +60,7 @@ radius = 5.0
 script = SubResource("GDScript_4k582")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=265977842]
+collision_layer = 2
 script = ExtResource("1_sbr80")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1503492797]
