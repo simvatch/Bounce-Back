@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dx2miamulub26"]
+[gd_scene load_steps=10 format=3 uid="uid://dx2miamulub26"]
 
 [ext_resource type="Script" uid="uid://dykd02fcv8yta" path="res://Tutorial scripts/player.gd" id="1_sbr80"]
 [ext_resource type="Texture2D" uid="uid://bketdlmfpule1" path="res://Tutorial assets/sprites/knight.png" id="2_dx68j"]
@@ -48,7 +48,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cxr5p")
 }],
-"loop": 1,
+"loop": true,
 "name": &"idle",
 "speed": 10.0
 }]
@@ -56,23 +56,23 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_tt62d"]
 radius = 5.0
 
-[node name="Node2D" type="Node2D" unique_id=2059928526]
+[node name="Node2D" type="Node2D"]
 script = SubResource("GDScript_4k582")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=265977842]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 collision_layer = 2
 script = ExtResource("1_sbr80")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1503492797]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_oxpsm")
 animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.72209924
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1523082185]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_tt62d")
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1533904143]
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 zoom = Vector2(4, 4)

@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://le4j0rec0l0k"]
+[gd_scene load_steps=15 format=3 uid="uid://bof3p7w4pkxgb"]
 
 [ext_resource type="PackedScene" uid="uid://dx2miamulub26" path="res://Tutorial scenes/Player.tscn" id="1_ol5py"]
 [ext_resource type="PackedScene" uid="uid://co8oqbpd4jcrx" path="res://Tutorial scenes/building.tscn" id="2_phjim"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://cks8nalbixoke" path="res://fishTank.png" id="4_1oqtj"]
 [ext_resource type="Texture2D" uid="uid://blggai6vywt5f" path="res://flower.png" id="5_ihsvy"]
 [ext_resource type="Texture2D" uid="uid://qw3ptftsewwk" path="res://table.png" id="6_1oqtj"]
+[ext_resource type="Texture2D" uid="uid://btqnt0nch23e0" path="res://TrumpWithFlag.png" id="7_ihsvy"]
+[ext_resource type="Script" path="res://Tutorial scripts/game.gd" id="8_game"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b0sjq"]
 texture = ExtResource("3_aogk1")
@@ -33,18 +35,34 @@ sources/1 = SubResource("TileSetAtlasSource_djh8m")
 sources/2 = SubResource("TileSetAtlasSource_gk2op")
 sources/4 = SubResource("TileSetAtlasSource_ihsvy")
 
-[node name="Node2D" type="Node2D" unique_id=664124610]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b0sjq"]
+size = Vector2(22.4375, 25.84375)
 
-[node name="Player Node2D" parent="." unique_id=2059928526 instance=ExtResource("1_ol5py")]
+[node name="Node2D" type="Node2D"]
+script = ExtResource("8_game")
+
+[node name="Player Node2D" parent="." instance=ExtResource("1_ol5py")]
 z_index = 5
 position = Vector2(-1, -1)
 
-[node name="Building Node2D2" parent="." unique_id=663521476 instance=ExtResource("2_phjim")]
+[node name="Building Node2D2" parent="." instance=ExtResource("2_phjim")]
 position = Vector2(-10, -1019)
 
-[node name="TileMap" type="TileMap" parent="." unique_id=708413870]
+[node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(0.5, 0.5)
 tile_set = SubResource("TileSet_tt62d")
 rendering_quadrant_size = 10
 format = 2
-layer_0/tile_data = PackedInt32Array(-720903, 196610, 4, -720898, 4, 4)
+layer_0/tile_data = PackedInt32Array(-720898, 4, 4, -720903, 196608, 3, -1179640, 196610, 4, -1376263, 4, 4, -1376258, 196610, 4, -1835018, 131073, 6, -1834996, 196610, 4, -2359291, 4, 4, -2818057, 196608, 3, -3276792, 196610, 4, -3276795, 196608, 3, -3473412, 131073, 6, -3997688, 4, 4, -4259847, 196608, 3, -4849653, 196610, 4, -5177350, 131073, 6, -5767167, 131073, 6, -5242869, 131073, 6, -4784121, 131073, 6, -6029322, 196608, 3, -6356980, 196610, 4, -6356990, 196610, 4, -6291448, 131073, 6, -8519671, 4, 4, -6750212, 196610, 4, -7471113, 196608, 3, -7143418, 196610, 4, -7864312, 4, 4, -7995383, 131073, 6, -8323078, 196610, 4, -8323073, 196610, 4, -8323075, 196608, 3, -8912898, 131073, 6, -9043965, 196610, 4, -9371656, 4, 4, -9371651, 196610, 4, -9830394, 196608, 3, -9764854, 131073, 6, -10223621, 196608, 3, -10878967, 4, 4, -10878972, 196608, 3, -11337717, 131073, 6, -11599874, 4, 4, -12124171, 196608, 3, -12124165, 196610, 4, -12582903, 4, 4, -12582908, 196608, 3, -12779530, 131073, 6, -13107202, 196610, 4, -13369337, 196610, 4, -13631490, 4, 4, -13631495, 196608, 3, -13959158, 131073, 6, -14548987, 196610, 4, -14286854, 4, 4, -14745588, 196610, 4, -14745608, 131073, 6, -15269890, 196610, 4, -15597561, 196610, 4, -15794187, 196608, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(90.00001, -1963.0001)
+scale = Vector2(0.14843751, 0.12304726)
+texture = ExtResource("7_ihsvy")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(155, -1840)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-64.78125, -120.078125)
+shape = SubResource("RectangleShape2D_b0sjq")
