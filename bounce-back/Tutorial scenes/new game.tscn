@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bof3p7w4pkxgb"]
+[gd_scene format=3 uid="uid://bof3p7w4pkxgb"]
 
 [ext_resource type="PackedScene" uid="uid://dx2miamulub26" path="res://Tutorial scenes/Player.tscn" id="1_ol5py"]
 [ext_resource type="PackedScene" uid="uid://co8oqbpd4jcrx" path="res://Tutorial scenes/building.tscn" id="2_phjim"]
@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://blggai6vywt5f" path="res://flower.png" id="5_ihsvy"]
 [ext_resource type="Texture2D" uid="uid://qw3ptftsewwk" path="res://table.png" id="6_1oqtj"]
 [ext_resource type="Texture2D" uid="uid://btqnt0nch23e0" path="res://TrumpWithFlag.png" id="7_ihsvy"]
-[ext_resource type="Script" path="res://Tutorial scripts/game.gd" id="8_game"]
+[ext_resource type="Script" uid="uid://ndlfwp25las1" path="res://Tutorial scripts/game.gd" id="8_game"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b0sjq"]
 texture = ExtResource("3_aogk1")
@@ -38,31 +38,31 @@ sources/4 = SubResource("TileSetAtlasSource_ihsvy")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b0sjq"]
 size = Vector2(22.4375, 25.84375)
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" unique_id=1807753804]
 script = ExtResource("8_game")
 
-[node name="Player Node2D" parent="." instance=ExtResource("1_ol5py")]
-z_index = 5
-position = Vector2(-1, -1)
+[node name="Player Node2D" parent="." unique_id=1625765851 instance=ExtResource("1_ol5py")]
+position = Vector2(1, -13)
 
-[node name="Building Node2D2" parent="." instance=ExtResource("2_phjim")]
-position = Vector2(-10, -1019)
+[node name="Building Node2D2" parent="." unique_id=2078306383 instance=ExtResource("2_phjim")]
+position = Vector2(-11, -1019)
 
-[node name="TileMap" type="TileMap" parent="."]
-scale = Vector2(0.5, 0.5)
+[node name="TileMap" type="TileMap" parent="." unique_id=103433]
+position = Vector2(-9, -15.000002)
+scale = Vector2(0.4, 0.4)
 tile_set = SubResource("TileSet_tt62d")
 rendering_quadrant_size = 10
 format = 2
-layer_0/tile_data = PackedInt32Array(-720898, 4, 4, -720903, 196608, 3, -1179640, 196610, 4, -1376263, 4, 4, -1376258, 196610, 4, -1835018, 131073, 6, -1834996, 196610, 4, -2359291, 4, 4, -2818057, 196608, 3, -3276792, 196610, 4, -3276795, 196608, 3, -3473412, 131073, 6, -3997688, 4, 4, -4259847, 196608, 3, -4849653, 196610, 4, -5177350, 131073, 6, -5767167, 131073, 6, -5242869, 131073, 6, -4784121, 131073, 6, -6029322, 196608, 3, -6356980, 196610, 4, -6356990, 196610, 4, -6291448, 131073, 6, -8519671, 4, 4, -6750212, 196610, 4, -7471113, 196608, 3, -7143418, 196610, 4, -7864312, 4, 4, -7995383, 131073, 6, -8323078, 196610, 4, -8323073, 196610, 4, -8323075, 196608, 3, -8912898, 131073, 6, -9043965, 196610, 4, -9371656, 4, 4, -9371651, 196610, 4, -9830394, 196608, 3, -9764854, 131073, 6, -10223621, 196608, 3, -10878967, 4, 4, -10878972, 196608, 3, -11337717, 131073, 6, -11599874, 4, 4, -12124171, 196608, 3, -12124165, 196610, 4, -12582903, 4, 4, -12582908, 196608, 3, -12779530, 131073, 6, -13107202, 196610, 4, -13369337, 196610, 4, -13631490, 4, 4, -13631495, 196608, 3, -13959158, 131073, 6, -14548987, 196610, 4, -14286854, 4, 4, -14745588, 196610, 4, -14745608, 131073, 6, -15269890, 196610, 4, -15597561, 196610, 4, -15794187, 196608, 3)
+layer_0/tile_data = PackedInt32Array(-720898, 4, 4, -720903, 196608, 3, -1245175, 196610, 4, -1572866, 196610, 4, -1507335, 4, 4, -2097136, 196610, 4, -1638407, 131073, 6, -2031606, 4, 4, -2031610, 196608, 3, -2752502, 196608, 3, -2752505, 196610, 4, -3276810, 131073, 6, -4194309, 131073, 6, -3866611, 196610, 4, -3866608, 196608, 3, -4784113, 131073, 6, -4849649, 131073, 6, -4915185, 131073, 6, -5177352, 196608, 3, -5898225, 196610, 4, -6488048, 196610, 4, -5832692, 131073, 6, -6356998, 196610, 4, -7077883, 196610, 4, -7733236, 4, 4, -8257542, 196610, 4, -7864308, 4, 4, -8060918, 196610, 4, -7995379, 131073, 6, -7405581, 196608, 3, -7405579, 196608, 3, -8781813, 196610, 4, -8716279, 131073, 6, -9633775, 196610, 4, -9568242, 131073, 6, -10485746, 4, 4, -10485749, 196608, 3, -10158085, 131073, 6, -11534340, 196610, 4, -11534344, 196608, 3, -12058610, 4, 4, -12058614, 196608, 3, -12582918, 131073, 6, -12648451, 196610, 4, -12713990, 196610, 4, -13369331, 4, 4, -13500403, 4, 4, -13500402, 131073, 6, -13697012, 196610, 4, -13697010, 196610, 4, -13369335, 196608, 3, -14024688, 131073, 6, -14090224, 196610, 4, -14090227, 196610, 4, -14942220, 196608, 3)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=750032287]
 position = Vector2(90.00001, -1963.0001)
 scale = Vector2(0.14843751, 0.12304726)
 texture = ExtResource("7_ihsvy")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=439972071]
 position = Vector2(155, -1840)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=396352786]
 position = Vector2(-64.78125, -120.078125)
 shape = SubResource("RectangleShape2D_b0sjq")
