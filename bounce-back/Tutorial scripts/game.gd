@@ -3,6 +3,7 @@ extends Node2D
 const TIME_LIMIT := 60.0
 const WIN_SCENE := "res://winning.tscn"
 const LOSE_SCENE := "res://loosing.tscn"
+const BONUS_TIME := 2.0
 
 var timer: Timer
 var time_label: Label
@@ -23,14 +24,21 @@ func _ready() -> void:
 
 	_build_timer_label()
 
+	for can in get_tree().get_nodes_in_group("spray_cans"):
+		can.collected.connect(_on_spray_can_collected)
+
 
 func _process(_delta: float) -> void:
 	if finished:
 		return
 	var seconds_left := int(ceil(timer.time_left))
 	time_label.text = "%d:%02d" % [seconds_left / 60, seconds_left % 60]
-	if seconds_left <= 10:
-		time_label.modulate = Color(1, 0.3, 0.3)
+	time_label.modulate = Color(1, 0.3, 0.3) if seconds_left <= 10 else Color.WHITE
+
+func _on_spray_can_collected() -> void:
+	if finished:
+		return
+	timer.start(timer.time_left + BONUS_TIME)
 
 func _build_timer_label() -> void:
 	var hud := CanvasLayer.new()

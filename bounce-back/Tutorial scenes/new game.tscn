@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bof3p7w4pkxgb"]
+[gd_scene load_steps=16 format=3 uid="uid://bof3p7w4pkxgb"]
 
 [ext_resource type="PackedScene" uid="uid://dx2miamulub26" path="res://Tutorial scenes/Player.tscn" id="1_ol5py"]
 [ext_resource type="PackedScene" uid="uid://co8oqbpd4jcrx" path="res://Tutorial scenes/building.tscn" id="2_phjim"]
@@ -39,16 +39,16 @@ sources/4 = SubResource("TileSetAtlasSource_ihsvy")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b0sjq"]
 size = Vector2(22.4375, 25.84375)
 
-[node name="Node2D3" type="Node2D" unique_id=148665028]
+[node name="Node2D3" type="Node2D"]
 script = ExtResource("8_game")
 
-[node name="Player Node2D" parent="." unique_id=1054803132 instance=ExtResource("1_ol5py")]
+[node name="Player Node2D" parent="." instance=ExtResource("1_ol5py")]
 position = Vector2(1, -13)
 
-[node name="Building Node2D2" parent="." unique_id=2058312888 instance=ExtResource("2_phjim")]
+[node name="Building Node2D2" parent="." instance=ExtResource("2_phjim")]
 position = Vector2(-11, -1019)
 
-[node name="TileMap" type="TileMap" parent="." unique_id=1557797210]
+[node name="TileMap" type="TileMap" parent="."]
 position = Vector2(-9, -15.000002)
 scale = Vector2(0.4, 0.4)
 tile_set = SubResource("TileSet_tt62d")
@@ -56,62 +56,62 @@ rendering_quadrant_size = 10
 format = 2
 layer_0/tile_data = PackedInt32Array(-720898, 4, 4, -720903, 196608, 3, -1245175, 196610, 4, -1572866, 196610, 4, -1507335, 4, 4, -2097136, 196610, 4, -1638407, 131073, 6, -2031606, 4, 4, -2031610, 196608, 3, -2752502, 196608, 3, -2752505, 196610, 4, -3276810, 131073, 6, -4194309, 131073, 6, -3866611, 196610, 4, -3866608, 196608, 3, -4784113, 131073, 6, -5177352, 196608, 3, -5898225, 196610, 4, -6488048, 196610, 4, -5832692, 131073, 6, -7733236, 4, 4, -8257542, 196610, 4, -7405581, 196608, 3, -9633775, 196610, 4, -10158085, 131073, 6, -11534340, 196610, 4, -11534344, 196608, 3, -12058610, 4, 4, -12058614, 196608, 3, -13369331, 4, 4, -13500403, 4, 4, -13697012, 196610, 4, -13697010, 196610, 4, -13369335, 196608, 3, -14024688, 131073, 6, -14090227, 196610, 4, -14942220, 196608, 3, -2228235, 196608, 3, -3342341, 4, 4, -3932152, 4, 4, -4259841, 196610, 4, -4849655, 4, 4, -5177347, 196610, 4, -7667706, 131073, 6, -8716279, 131073, 6, -9175051, 196610, 4, -9633781, 4, 4, -10485746, 4, 4, -10682352, 196610, 4, -11075581, 4, 4, -11010049, 196608, 3, -12582917, 131073, 6, -12648449, 196610, 4, -14352385, 4, 4, -14942216, 4, 4, -15532017, 196610, 4, -15532021, 196610, 4, -15532026, 196608, 3, -15794187, 131073, 6, -16252928, 196610, 4, -16515063, 196610, 4, -16842754, 4, 4, -16842759, 196608, 3, -17235953, 131073, 6, -17694725, 4, 4, -18022393, 196610, 4, -18153457, 131073, 6, -18415616, 196610, 4, -18350085, 4, 4, -18350089, 196608, 3, -18874371, 131073, 6, -19333110, 196610, 4, -19529741, 196608, 3, -19464201, 131073, 6, -7012349, 131073, 6, -6356998, 4, 4)
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=59523591]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(90.00001, -1963.0001)
 scale = Vector2(0.14843751, 0.12304726)
 texture = ExtResource("7_ihsvy")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=402104821]
+[node name="Area2D" type="Area2D" parent="."]
 position = Vector2(155, -1840)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1854376106]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-64.78125, -120.078125)
 shape = SubResource("RectangleShape2D_b0sjq")
 
-[node name="Node2D2" parent="." unique_id=1995039072 instance=ExtResource("9_djh8m")]
+[node name="Node2D2" parent="." instance=ExtResource("9_djh8m")]
 position = Vector2(-72, -20)
 
-[node name="Node2D3" parent="." unique_id=824167806 instance=ExtResource("9_djh8m")]
+[node name="Node2D3" parent="." instance=ExtResource("9_djh8m")]
 position = Vector2(57, -234)
 
-[node name="Node2D4" parent="." unique_id=436801640 instance=ExtResource("9_djh8m")]
+[node name="Node2D4" parent="." instance=ExtResource("9_djh8m")]
 position = Vector2(-39, -367)
 
-[node name="Node2D5" parent="." unique_id=247458258 instance=ExtResource("9_djh8m")]
+[node name="Node2D5" parent="." instance=ExtResource("9_djh8m")]
 position = Vector2(22, -486)
 
-[node name="Node2D6" parent="." unique_id=261188082 instance=ExtResource("9_djh8m")]
+[node name="Node2D6" parent="." instance=ExtResource("9_djh8m")]
 position = Vector2(5, -619)
 
-[node name="Node2D7" parent="." unique_id=1386433411 instance=ExtResource("9_djh8m")]
+[node name="Node2D7" parent="." instance=ExtResource("9_djh8m")]
 position = Vector2(-25, -771)
 
-[node name="Node2D8" parent="." unique_id=1815733729 instance=ExtResource("9_djh8m")]
+[node name="Node2D8" parent="." instance=ExtResource("9_djh8m")]
 position = Vector2(-60, -916)
 
-[node name="Node2D9" parent="." unique_id=1627493044 instance=ExtResource("9_djh8m")]
+[node name="Node2D9" parent="." instance=ExtResource("9_djh8m")]
 position = Vector2(87, -1208)
 
-[node name="Node2D10" parent="." unique_id=2057415688 instance=ExtResource("9_djh8m")]
+[node name="Node2D10" parent="." instance=ExtResource("9_djh8m")]
 position = Vector2(93, -1393)
 
-[node name="Node2D11" parent="." unique_id=1518915555 instance=ExtResource("9_djh8m")]
+[node name="Node2D11" parent="." instance=ExtResource("9_djh8m")]
 position = Vector2(-77, -1668)
 
-[node name="Node2D12" parent="." unique_id=431984729 instance=ExtResource("9_djh8m")]
+[node name="Node2D12" parent="." instance=ExtResource("9_djh8m")]
 position = Vector2(90, -1645)
 
-[node name="Node2D13" parent="." unique_id=2141338493 instance=ExtResource("9_djh8m")]
+[node name="Node2D13" parent="." instance=ExtResource("9_djh8m")]
 position = Vector2(4, -1886)
 
-[node name="Node2D14" parent="." unique_id=31500924 instance=ExtResource("9_djh8m")]
+[node name="Node2D14" parent="." instance=ExtResource("9_djh8m")]
 position = Vector2(0, -1965)
 
-[node name="Node2D15" parent="." unique_id=2013856212 instance=ExtResource("9_djh8m")]
+[node name="Node2D15" parent="." instance=ExtResource("9_djh8m")]
 position = Vector2(27, -1964)
 
-[node name="Node2D16" parent="." unique_id=483671054 instance=ExtResource("9_djh8m")]
+[node name="Node2D16" parent="." instance=ExtResource("9_djh8m")]
 position = Vector2(48, -1966)
 
-[node name="Node2D17" parent="." unique_id=1887066384 instance=ExtResource("9_djh8m")]
+[node name="Node2D17" parent="." instance=ExtResource("9_djh8m")]
 position = Vector2(73, -1964)
