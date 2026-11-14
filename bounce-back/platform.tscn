@@ -5,14 +5,15 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tt62d"]
 size = Vector2(32, 9)
 
-[node name="Node2D" type="Node2D" unique_id=127784974]
+[node name="Node2D2" type="Node2D" unique_id=127784974]
 
 [node name="AnimatableBody2D" type="AnimatableBody2D" parent="." unique_id=1816737538]
 
 [node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D" unique_id=678223945]
 texture = ExtResource("1_mi635")
 region_enabled = true
-region_rect = Rect2(16, 0, 32, 9)
+region_rect = Rect2(16, 48, 32, 9)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D" unique_id=378296001]
 shape = SubResource("RectangleShape2D_tt62d")
+one_way_collision = true
