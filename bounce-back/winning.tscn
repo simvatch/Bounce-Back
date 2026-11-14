@@ -1,6 +1,4 @@
-
-[gd_scene load_steps=5 format=3 uid="uid://53ugt1goc4tv"]
-
+[gd_scene load_steps=5 format=3 uid="uid://s5fxumwflxyw"]
 
 [ext_resource type="Script" uid="uid://dfh7822wao3rk" path="res://winning.gd" id="1_fxjn3"]
 [ext_resource type="FontFile" uid="uid://djwq5c1hmpy1n" path="res://static/Firjar-Medium.ttf" id="1_yy2vj"]
@@ -18,12 +16,12 @@ offset_bottom = 697.0
 color = Color(1, 0.4745098, 0.25882354, 1)
 
 [node name="Label" type="Label" parent="."]
-offset_left = 54.0
-offset_top = -57.0
-offset_right = 1112.0
-offset_bottom = 363.0
+offset_left = 201.0
+offset_top = -49.0
+offset_right = 1259.0
+offset_bottom = 371.0
 theme_override_fonts/font = ExtResource("1_yy2vj")
-theme_override_font_sizes/font_size = 300
+theme_override_font_sizes/font_size = 200
 text = "You win!"
 
 [node name="Button" type="Button" parent="."]
@@ -59,6 +57,15 @@ offset_right = 1034.1594
 offset_bottom = 809.1365
 rotation = -0.7136295
 texture = ExtResource("3_rsj4t")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 98.0
+offset_top = 185.0
+offset_right = 1078.0
+offset_bottom = 275.0
+theme_override_font_sizes/font_size = 20
+text = "We’re gonna win so much, you may even get tired of winning. And you’ll say, 'Please, please. It’s too much winning. We can’t take it anymore. Mr. President, it’s too much.' And I’ll say, 'No, it isn’t!' We have to keep winning. We have to win more! We’re gonna win more. We’re gonna win so much."
+autowrap_mode = 3
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
