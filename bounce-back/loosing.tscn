@@ -1,8 +1,6 @@
-<<<<<<< Updated upstream
+
 [gd_scene load_steps=4 format=3 uid="uid://1s0dqwsty08d"]
-=======
-[gd_scene format=3 uid="uid://1s0dqwsty08d"]
->>>>>>> Stashed changes
+
 
 [ext_resource type="Texture2D" uid="uid://btqnt0nch23e0" path="res://TrumpWithFlag.png" id="1_bt2ns"]
 [ext_resource type="Script" uid="uid://brxh3au0drl2u" path="res://loosing.gd" id="1_m14ht"]

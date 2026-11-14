@@ -1,8 +1,6 @@
-<<<<<<< Updated upstream
+
 [gd_scene load_steps=5 format=3 uid="uid://53ugt1goc4tv"]
-=======
-[gd_scene format=3 uid="uid://53ugt1goc4tv"]
->>>>>>> Stashed changes
+
 
 [ext_resource type="Script" uid="uid://dfh7822wao3rk" path="res://winning.gd" id="1_fxjn3"]
 [ext_resource type="FontFile" uid="uid://djwq5c1hmpy1n" path="res://static/Firjar-Medium.ttf" id="1_yy2vj"]
