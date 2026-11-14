@@ -1,10 +1,11 @@
-[gd_scene load_steps=0 format=3 uid="uid://le4j0rec0l0k"]
+[gd_scene format=3 uid="uid://le4j0rec0l0k"]
 
 [ext_resource type="PackedScene" uid="uid://dx2miamulub26" path="res://Tutorial scenes/Player.tscn" id="1_ol5py"]
 [ext_resource type="PackedScene" uid="uid://co8oqbpd4jcrx" path="res://Tutorial scenes/building.tscn" id="2_phjim"]
 [ext_resource type="Texture2D" uid="uid://wjkbsm578ktt" path="res://chair.png" id="3_aogk1"]
-[ext_resource type="Texture2D" uid="uid://osmsjdn8i4fa" path="res://fishTank.png" id="4_1oqtj"]
+[ext_resource type="Texture2D" uid="uid://cks8nalbixoke" path="res://fishTank.png" id="4_1oqtj"]
 [ext_resource type="Texture2D" uid="uid://blggai6vywt5f" path="res://flower.png" id="5_ihsvy"]
+[ext_resource type="Texture2D" uid="uid://qw3ptftsewwk" path="res://table.png" id="6_1oqtj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b0sjq"]
 texture = ExtResource("3_aogk1")
@@ -18,19 +19,19 @@ texture = ExtResource("4_1oqtj")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gk2op"]
 texture = ExtResource("5_ihsvy")
+3:4/size_in_atlas = Vector2i(2, 4)
 3:4/0 = 0
-4:4/0 = 0
-3:5/0 = 0
-4:5/0 = 0
-3:6/0 = 0
-4:6/0 = 0
-3:7/0 = 0
-4:7/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ihsvy"]
+texture = ExtResource("6_1oqtj")
+0:4/size_in_atlas = Vector2i(7, 4)
+0:4/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_tt62d"]
 sources/0 = SubResource("TileSetAtlasSource_b0sjq")
 sources/1 = SubResource("TileSetAtlasSource_djh8m")
 sources/2 = SubResource("TileSetAtlasSource_gk2op")
+sources/4 = SubResource("TileSetAtlasSource_ihsvy")
 
 [node name="Node2D" type="Node2D" unique_id=664124610]
 
@@ -42,5 +43,8 @@ position = Vector2(-1, -1)
 position = Vector2(-10, -1019)
 
 [node name="TileMap" type="TileMap" parent="." unique_id=708413870]
+scale = Vector2(0.5, 0.5)
 tile_set = SubResource("TileSet_tt62d")
+rendering_quadrant_size = 10
 format = 2
+layer_0/tile_data = PackedInt32Array(-720903, 196610, 4, -720898, 4, 4)
