@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://le4j0rec0l0k"]
+[gd_scene load_steps=0 format=3 uid="uid://le4j0rec0l0k"]
 
 [ext_resource type="PackedScene" uid="uid://dx2miamulub26" path="res://Tutorial scenes/Player.tscn" id="1_ol5py"]
 [ext_resource type="PackedScene" uid="uid://co8oqbpd4jcrx" path="res://Tutorial scenes/building.tscn" id="2_phjim"]
