@@ -1,0 +1,10 @@
+[gd_scene load_steps=0 format=3 uid="uid://bgvnkmgxub8tg"]
+
+[ext_resource type="PackedScene" uid="uid://dx2miamulub26" path="res://Player.tscn" id="1_n2s37"]
+
+[node name="Node2D" type="Node2D" unique_id=1683304062]
+
+[node name="Node2D" parent="." unique_id=2059928526 instance=ExtResource("1_n2s37")]
+
+[node name="Camera2D" type="Camera2D" parent="Node2D" unique_id=1454831223]
+zoom = Vector2(4, 4)
